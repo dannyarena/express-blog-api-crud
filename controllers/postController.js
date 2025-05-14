@@ -19,7 +19,10 @@ function show(req, res) {
     if (post) {
         res.json(post);
     } else {
-        res.status(404).send('Post non trovato');
+        res.status(404).json({
+            error: 'Not Found',
+            message: 'Post non trovato'
+        });
     }
 }
 
