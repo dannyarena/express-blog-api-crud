@@ -37,10 +37,25 @@ function update(req, res) {
     res.send(`Aggiornamento del post ${id}`);
 }
 
-// destroy
+// destroy con logica di eliminazione
 function destroy(req, res) {
     const id = parseInt(req.params.id);
-    res.send(`Cancellazione del post ${id}`);
+   const post = posts.find(p => p.id === id);
+
+   if(!post) {
+    return res.status(404).json({
+        error: 'Not Found',
+        message: 'Post non trovato'
+    
+    });
+   }
+
+// Rimuovi il post dall’array
+   post.splice(posts.indexOf(post), 1);
+// Mostra l’array aggiornato nel terminale
+   console.log(posts);
+// Rispondi con 204 No Content
+   res.sendStatus(204);
 }
 
 module.exports = {
