@@ -38,3 +38,10 @@ function destroy(req, res) {
     res.send(`Cancellazione del post ${id}`);
 }
 
+module.exports = {
+    index,
+    show,
+    store,
+    update,
+    destroy
+};
