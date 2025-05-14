@@ -24,3 +24,10 @@ function store(req, res) {
     res.send('Creazione di un nuovo post');
 }
 
+//update
+
+function update(req, res) {
+    const id = parseInt(req.params.id);
+    res.send(`Aggiornamento del post ${id}`);
+}
+
