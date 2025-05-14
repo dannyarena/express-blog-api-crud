@@ -51,7 +51,7 @@ function destroy(req, res) {
    }
 
 // Rimuovi il post dall’array
-   post.splice(posts.indexOf(post), 1);
+   posts.splice(posts.indexOf(post), 1);
 // Mostra l’array aggiornato nel terminale
    console.log(posts);
 // Rispondi con 204 No Content
