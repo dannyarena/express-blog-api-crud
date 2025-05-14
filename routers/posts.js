@@ -3,15 +3,11 @@ const express = require ('express');
 const router = express.Router();
 const { posts } = require('../data/posts');
 
-router.get('/', postController.index);
-
-router.get('/:id', postController.show);
-
-router.post('/', postController.store);
-
-router.put('/:id', postController.update);
-
-router.delete('/:id', postController.destroy);
-
+// Rotte CRUD
+router.get('/', postsController.index);
+router.get('/:id', postsController.show);
+router.post('/', postsController.store);
+router.put('/:id', postsController.update);
+router.delete('/:id', postsController.destroy);
 
 module.exports = router;
