@@ -5,32 +5,13 @@ const { posts } = require('../data/posts');
 
 router.get('/', postController.index);
 
-router.get('/:id', (req, res) => {
-    const id = parseInt(req.params.id);
-    const post = posts.find(p => p.id === id);
+router.get('/:id', postController.show);
 
-    if (post) {
-        res.json(post);
-    }
-    else {
-        res.status(404).send('Post non trovato');
-    }
-});
+router.post('/', postController.store);
 
-router.post('/', (req, res) => {
-    res.send('Creazione di un nuovo post');
-});
+router.put('/:id', postController.update);
 
-router.put('/:id', (req, res) => {
-    const id = req.params.id;
-    res.send(`Aggiornamento del post ${id}`);
-});
-
-router.delete('/:id', (req, res) => {
-    const id = req.params.id;
-    res.send(`Cancellazione del post ${id}`);
-});
-
+router.delete('/:id', postController.destroy);
 
 
 module.exports = router;
