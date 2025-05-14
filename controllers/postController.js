@@ -31,3 +31,10 @@ function update(req, res) {
     res.send(`Aggiornamento del post ${id}`);
 }
 
+// destroy
+
+function destroy(req, res) {
+    const id = parseInt(req.params.id);
+    res.send(`Cancellazione del post ${id}`);
+}
+
