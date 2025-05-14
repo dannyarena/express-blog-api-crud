@@ -17,3 +17,10 @@ function show(req, res) {
         res.status(404).send('Post non trovato');
     }
 }
+
+// store
+
+function store(req, res) {
+    res.send('Creazione di un nuovo post');
+}
+
