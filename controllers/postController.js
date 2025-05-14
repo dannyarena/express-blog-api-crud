@@ -1,5 +1,19 @@
 const { posts } = require('../data/posts');
 
+// index
 function index(req, res) {
     res.json(posts);
+}
+
+// show
+
+function show(req, res) {
+    const id = parseInt(req.params.is);
+    const post =post.find(p => p.id === id);
+
+    if (post) {
+        res.json(post);
+    } else {
+        res.status(404).send('Post non trovato');
+    }
 }
