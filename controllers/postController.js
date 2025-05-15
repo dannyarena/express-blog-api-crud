@@ -53,6 +53,12 @@ function update(req, res) {
             message: 'Post non trovato'
         });
     }
+
+    // Aggiorna i campi del post
+    post.title = req.body.title;
+    post.content = req.body.content;
+    post.image = req.body.image;
+    post.tags = req.body.tags;
 }
 
 // destroy con logica di eliminazione
