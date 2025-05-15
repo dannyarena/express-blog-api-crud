@@ -28,8 +28,8 @@ function show(req, res) {
 
 // store
 function store(req, res) {
-    console.log(req.body);
-    res.send('Creazione di un nuovo post');
+    const newId = posts[posts.lenght - 1].id + 1;
+    
 }
 
 //update
