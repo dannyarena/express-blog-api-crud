@@ -45,6 +45,7 @@ function store(req, res) {
 //update
 function update(req, res) {
     const id = parseInt(req.params.id);
+    // Cerchiamo il post con l'id specificato
     const post = posts.find(p => p.id === id);
 
     if (!post) {
@@ -61,7 +62,7 @@ function update(req, res) {
     post.tags = req.body.tags;
 
     console.log(posts);
-    res.json(posts);
+    res.json(post);
 }
 
 // destroy con logica di eliminazione
