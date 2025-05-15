@@ -45,7 +45,14 @@ function store(req, res) {
 //update
 function update(req, res) {
     const id = parseInt(req.params.id);
-    res.send(`Aggiornamento del post ${id}`);
+    const post = posts.find(p => p.id === id);
+
+    if (!post) {
+        return res.status(404).json({
+            error: 'Not Found',
+            message: 'Post non trovato'
+        });
+    }
 }
 
 // destroy con logica di eliminazione
