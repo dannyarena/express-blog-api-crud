@@ -59,6 +59,9 @@ function update(req, res) {
     post.content = req.body.content;
     post.image = req.body.image;
     post.tags = req.body.tags;
+
+    console.log(posts);
+    res.json(posts);
 }
 
 // destroy con logica di eliminazione
