@@ -28,7 +28,7 @@ function show(req, res) {
 
 // store
 function store(req, res) {
-    const newId = posts[posts.lenght - 1].id + 1;
+    const newId = posts[posts.length - 1].id + 1;
     const newPost = {
         id: newId,
         title: req.body.title,
