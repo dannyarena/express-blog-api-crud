@@ -36,6 +36,10 @@ function store(req, res) {
         image: req.body.image,
         tags: req.body.tags
     };
+
+    posts.push(newPost);
+    console.log(posts);
+    res.status(201).json(newPost);
 }
 
 //update
