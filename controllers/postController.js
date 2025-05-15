@@ -29,7 +29,13 @@ function show(req, res) {
 // store
 function store(req, res) {
     const newId = posts[posts.lenght - 1].id + 1;
-    
+    const newPost = {
+        id: newId,
+        title: req.body.title,
+        content: req.body.content,
+        image: req.body.image,
+        tags: req.body.tags
+    };
 }
 
 //update
