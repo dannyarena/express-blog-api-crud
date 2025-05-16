@@ -6,3 +6,5 @@ function errorsHandler(err, req, res, next) {
         message: 'Qualcosa è andato storto'
     })
 }
+
+module.exports = errorsHandler;
