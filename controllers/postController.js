@@ -78,11 +78,11 @@ function destroy(req, res) {
     });
    }
 
-// Rimuovi il post dall’array
+// Rimuove il post dall’array
    posts.splice(posts.indexOf(post), 1);
 // Mostra l’array aggiornato nel terminale
    console.log(posts);
-// Rispondi con 204 No Content
+// Risponde con 204 No Content
    res.sendStatus(204);
 }
 
