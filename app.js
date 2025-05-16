@@ -1,6 +1,6 @@
 const express = require ('express');
 const app = express();
-app.use(express.json());
+app.use(express.json());  // Middleware per il parsing del JSON
 const postsRouter = require('./routers/posts');
 
 app.use('/posts', postsRouter);
